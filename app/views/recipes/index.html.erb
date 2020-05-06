@@ -1,4 +1,8 @@
-<h1>Recipes#index</h1>
-<% @recipes.each do |recipe| %>
-    <%= recipe.name %>
-<% end %>
+<h1>All Recipes</h1>
+<div align="center">
+  <ul>
+    <% @recipes.each do |recipe| %>
+        <li><%= link_to recipe.name, recipe_path(recipe) %></li> 
+    <% end %>
+  </ul>
+</div>
